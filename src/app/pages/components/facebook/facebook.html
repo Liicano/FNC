@@ -1,0 +1,68 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <hr class="divider">
+        <div class="row">
+            <div class="col-md-5 form-inline text-center">
+               <h4 class="text-info"><span class=""><b>PAGINA:</b> </span> FUNDACION AMIGOS DEL NIÑO CON CANCER</h4>
+            </div>
+            <div class="col-md-2 form-inline text-center">
+            <h4 class="text-info"><span class=""><b>SEGUIDORES:</b> </span> 374</h4>
+            </div>
+            <div class="col-md-5 text-center">
+               <div class="row">
+                   <div class="col-md-4">
+                     <select class="form-control">
+                        <option value="0" selected="">Tipo</option>
+                        <option value="1">Imagen</option>
+                        <option value="2">Estado</option>
+                     </select>
+                   </div>
+                   <div class="col-md-4">
+                        <select class="form-control">
+                            <option value="0" selected="">Publicacion</option>
+                            <option value="1">Ayuda a nuestros angelitos</option>
+                            <option value="2">Registrate en nuestra plataforma</option>
+                        </select>
+                   </div>
+                   <div class="col-md-4">
+                       <button class="btn btn-primary btn-sm btn-block"><span class="fa fa-search"></span></button>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <hr class="divider">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 text-center" ng-controller="facebookCtrl">
+        <div ba-panel ba-panel-title="REACCIONES DEL PUBLICO" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+                <canvas id="pie" class="chart chart-pie"
+                       chart-options="options" chart-data="data" chart-labels="labels"
+                        chart-click="changeData">
+                </canvas>
+            </div>
+        </div>
+    </div>
+  
+     <div class="col-md-6 text-center" ng-controller="facebookCtrl">
+        <div ba-panel ba-panel-title="GRAFICA COMPARATIVA" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+                <canvas id="doughnut" chart-options="options" class="chart chart-doughnut"
+                        chart-data="dataDona" chart-labels="labelsDona" chart-click="changeData">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+        <button class="btn btn-lg btn-success btn-block">Descargar PDF</button>
+    </div>
+    <div class="col-md-4"></div>
+</div>

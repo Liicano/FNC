@@ -1,0 +1,72 @@
+<div class="row text-center">
+	<h2><b>Grafico Estadistico</b> - Total de participacion por mes.</h2>
+
+	<div class="col-md-6">
+		<hr class="divider">
+
+		<div ba-panel ba-panel-class="tabs-panel xsmall-panel with-scroll">
+  		<uib-tabset class="tabs-left">
+    	<uib-tab heading="Inicio">
+      <!-- <p class="text-center">
+        Take up one idea.
+      </p> -->
+
+      <div class="kameleon-icon-tabs kameleon-icon with-round-bg danger"><img ng-src="assets/img/theme/icon/kameleon/Money-Increase.svg"></div>
+      <p class="text-center">
+     	<b>En la siguiente grafica se muestra  el total de interacciones de cada una de las redes sociales que maneja el sistema (<span class="label label-info">FACEBOOK</span> - <span class="label label-default">INSTAGRAM</span>), por mes.</b>
+      </p>
+    </uib-tab>
+
+    <uib-tab heading="Fecha" class="text-center">
+   <div class="container-fluid text-center">
+   	  <div class="uib-datepicker-wrap text-center" ng-controller="unitarioCtrl" align="center">
+            <uib-datepicker ng-model="dt" datepicker-options="optionsDatepicker" datepicker-mode="month"></uib-datepicker>
+     </div>
+   </div>
+ </uib-tab>
+ 
+
+    <uib-tab heading="Reporte">
+   	<button class="btn btn-lg btn-success btn-block">Descargar PDF</button>
+  </uib-tabset>
+</div>
+
+<div class="row">
+	<div class="col-md-12 text-center">
+		<button class="btn btn-sm btn-primary btn-block">Comparar</button>
+		<hr class="divider">
+		<h1><b>Total de interacciones: <span class="text-info">60</span></b></h1>
+	</div>
+</div>
+	</div>
+	<div class="col-md-6" ng-controller="unitarioCtrl">
+		
+		<hr class="divider">
+    <div ba-panel ba-panel-title="GRAFICA COMPARATIVA" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+                <canvas id="doughnut" chart-options="options" class="chart chart-doughnut"
+                        chart-data="dataDona" chart-labels="labelsDona" chart-click="changeData">
+                </canvas>
+            </div>
+        </div>
+   
+
+	</div>
+	
+</div>
+
+<div class="row text-center" ng-controller="unitarioCtrl">
+	<h2><b>Proyeccion</b> - Resultados esperados en los siguientes meses.</h2>
+	<div class="col-md-12">
+		
+		<hr class="divider">
+
+		   <div ba-panel ba-panel-title="TENDENCIA A FUTURO" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-third-row">	
+                <canvas id="line" class="chart chart-line" chart-data="dataLineal" chart-labels="labels"
+                        chart-series="series" chart-click="changeData"></canvas>
+            </div>
+        </div>
+
+	</div>
+</div>

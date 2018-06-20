@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>FUNDACION || AMIGOS DEL NIÑO CON CANCER</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css_js_inicio/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css_js_inicio/bootstrap-toggle.css">
+
+<body ng-app="voluntariado" ng-controller="voluntariadoCtrl">
+
+   <div class="row" style="background-color: #E6E6FA;">
+      <div class="col-md-12 text-center">
+        <div class="container" style="border-radius: 15px;">
+             <hr class="divider">
+        <div class="alert alert-info"> <h2 class="text-primary"><b><i>INSCRIPCION WEB - VOLUNTARIADO</i></b></h2></div>
+         <hr class="divider">
+        </div>
+
+      </div>
+
+    <div class="container">
+       <p class="text-center">
+               Nombre y Apellido
+            </p>
+            <hr class="divider">
+         <div class="row">
+           <div class="col-md-6">
+                 <center>
+                     <input type="text" name="nombre" class="form-control" placeholder="Nombre" style="width: 80%;" ng-model="voluntario.nombre">
+                 </center>
+               </div>
+               <div class="col-md-6">
+                  <center>
+                     <input type="text" name="apellido" class="form-control" placeholder="Apellido" style="width: 80%;" ng-model="voluntario.apellido">
+                  </center>
+            </div>
+      </div>
+      <br>
+       <p class="text-center">
+              Datos de contacto
+            </p>
+            <hr class="divider">
+      <div class="row">
+         <div class="col-md-4 text-center">
+           <input type="text" name="cedula" class="form-control" placeholder="Cedula de identidad" ng-model="voluntario.cedula">
+         </div>
+         <div class="col-md-4 text-center">
+            <input type="mail" name="correo" class="form-control" placeholder="Correo" ng-model="voluntario.correo">
+         </div>
+         <div class="col-md-4 text-center">
+            <input type="text" name="telefono" class="form-control" placeholder="Telefono" ng-model="voluntario.telefono">
+         </div>
+      </div>
+
+
+       <br>
+       <p class="text-center">
+             Direccion
+            </p>
+            <hr class="divider">
+      <div class="row">
+         <div class="col-md-4">
+            <input type="text" name="estado" class="form-control" placeholder="Estado" ng-model="voluntario.direccion.estado">
+         </div>
+         <div class="col-md-4">
+            <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" ng-model="voluntario.direccion.ciudad">
+         </div>
+         <div class="col-md-4">
+            <textarea class="form-control"ng-model="voluntario.direccion.direccion" rows="5" placeholder="Direccion"></textarea>
+         </div>
+         <br>
+      </div>
+<hr class="divider">   
+    </div>
+
+<br>
+<br>
+    <hr class="divider">
+    <div class="container">
+      <br>
+       <h3 class="text-center">
+             Profesion
+            </h3>
+            <hr class="divider">
+       <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+             <select class="form-control" ng-model="voluntario.nivel_educacion" ng-change="institucion_formulario(voluntario.nivel_educacion)">
+                <option value="tipo_usuario" selected="" disabled="">¿Estudiante o Empleado?</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="empleado">Empleado</option>
+             </select>
+
+          </div>
+          <div class="col-md-4"></div>
+       </div>
+
+
+       <br>
+       <hr class="divider">
+       
+       <div class="row" ng-show="estudiante">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 text-center">
+            <!-- Nombre de la institucion -->
+
+            <label class="text-center" for="institucion_nombre">Nombre de la institucion</label>
+             <input type="text" name="institucion_nombre" class="form-control" placeholder="Nombre de la institucion">
+             <br>
+             <!-- Direccion de la institucion -->
+              <label class="text-center" for="institucion_nombre">Direccion de la institucion</label>
+             <input type="text" name="institucion_direccion" class="form-control" placeholder="Direccion de la institucion">
+
+             <br>
+             <!-- Ciudad de la institucion -->
+              <label class="text-center" for="institucion_nombre">Ciudad de la institucion</label>
+             <input type="text" name="institucion_direccion" class="form-control" placeholder="Ciudad de la institucion">
+
+             <br>
+             <!-- Grado de instruccion -->
+              <select class="form-control">
+                 <option value="0" selected="" disabled="">Grado de instruccion</option>
+                 <option value="bachiller">Bachiller</option>
+                 <option value="profesional">Profesional</option>
+              </select>
+
+                <br>
+             <!-- Numero de la institucion -->
+              <label class="text-center" for="institucion_nombre">Telefono de la institucion</label>
+             <input type="text" name="institucion_numero" class="form-control" placeholder="Telefono contacto">
+
+
+          </div>
+          <div class="col-md-4"></div>
+       </div>
+        <div class="row" ng-show="empleado">
+           <div class="col-md-4"></div>
+           <div class="col-md-4">
+                <!-- Nombre de la empresa -->
+
+            <label class="text-center" for="institucion_nombre">Nombre de la empresa</label>
+             <input type="text" name="empresa_nombre" class="form-control" placeholder="Nombre de la empresa">
+             <br>
+             <!-- Direccion de la empresa -->
+              <label class="text-center" for="institucion_nombre">Direccion de la empresa</label>
+             <input type="text" name="empresa_direccion" class="form-control" placeholder="Direccion de la empresa">
+
+             <br>
+             <!-- Ciudad de la empresa -->
+              <label class="text-center" for="empresa_nombre">Ciudad de la empresa</label>
+             <input type="text" name="empresa_direccion" class="form-control" placeholder="Ciudad de la empresa">
+
+             <br>
+             <div class="row">
+                <div class="col-md-6">
+                    <input type="text" name="empresa_cargo" class="form-control" placeholder="Cargo">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="empresa_antiguedad" class="form-control" placeholder="Antiguedad">
+                </div>
+             </div>
+
+                <br>
+             <!-- Numero de la Empresa -->
+              <label class="text-center" for="Empresa_nombre">Telefono de la Empresa</label>
+             <input type="text" name="Empresa_numero" class="form-control" placeholder="Telefono contacto">
+           </div>
+           <div class="col-md-4"></div>
+
+
+
+        </div>
+
+       <hr class="divider">
+       <hr class="divider">
+       <!-- AREA DE TRABAJO -->
+ <br>
+       <h3 class="text-center">
+            Area de trabajo
+            </h3>
+            <hr class="divider">
+       <div class="row">
+
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+             <select class="form-control" ng-model="voluntario.area_trabajo">
+                <option value="hospital_coromoto">Hospital Coromoto</option>
+                <option value="especialidades_pediatricas"> Hospital  especialidades pediatricas</option>
+                <option value="pastoral_salud">Pastoral de salud</option>
+                <option value="amigo_incondicional">Amigo incondicional</option>
+                <option value="actividades_externas">Actividades externas</option>
+                <option value="eventos">Eventos</option>
+             </select>
+          </div>
+          <div class="col-md-3"></div>
+
+         
+        
+       </div>
+
+<br>
+<hr class="divider">
+<div class="row">
+   <div class="col-md-6">
+      <button class="btn btn-lg btn-block btn-success"  ng-click="enviar_formulario(voluntario)">Enviar formulario</button>
+   </div>
+  <div class="col-md-6">
+     <a class="btn btn-lg btn-block btn-danger" href="../inicio.html">Salir</a>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+   </div>
+
+</body>
+<script type="text/javascript"src="../css_js_inicio/bootstrap.min.js"></script>
+<script type="text/javascript"src="../css_js_inicio/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"src="../css_js_inicio/bootstrap-toggle.js"></script>
+<script type="text/javascript"src="../css_js_inicio/angular.js"></script>
+<script type="text/javascript"src="../formularios/controladores/voluntariadoCtrl.
+js"></script>
+
+
+
+</html>

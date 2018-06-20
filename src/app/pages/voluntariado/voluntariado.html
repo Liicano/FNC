@@ -1,0 +1,170 @@
+<h3 class="text-center">Inscripcion web</h3>
+<hr class=" divider">
+
+<div class="row">
+	<div class="col-md-4 text-center">
+		
+		<div class="form-group row clearfix text-center">
+            <div class="userpic text-center" style="margin-left: 25%;">
+              <div class="userpic-wrapper text-center">
+                <img ng-src="{{ picture }}" ng-click="uploadPicture()">
+              </div>
+              <a href class="change-userpic" ng-click="uploadPicture()">Cargar imagen</a>
+              <input type="file" ng-model="voluntario.imagen" ng-show="false" id="uploadFile" ng-file-select="onFileSelect($files)">
+            </div>
+          
+        </div>
+
+	</div>
+	<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="input-group">
+				  <span class="input-group-addon input-group-addon-default addon-left" id="basic-addon1">V</span>
+				  <input type="text" ng-model="voluntario.cedula" placeholder="Cedula de identidad" class="form-control with-primary-addon"  aria-describedby="basic-addon1">
+				</div>
+				
+			</div>
+			<div class="col-md-4">
+				<div class="input-group">
+				  <span class="input-group-addon input-group-addon-default addon-left" id="basic-addon1"><span class="fa fa-user"></span></span>
+				  <input type="text" ng-model="voluntario.nombre" placeholder="Nombre" class="form-control with-primary-addon" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="input-group">
+				  <span class="input-group-addon input-group-addon-default addon-left" id="basic-addon1"><span class="fa fa-user"></span></span>
+				  <input type="text" ng-model="voluntario.apellido" placeholder="Apellido" class="form-control with-primary-addon" aria-describedby="basic-addon1">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<input type="text" ng-model="voluntario.estado" placeholder="Estado" class="form-control">
+			</div>
+			<div class="col-md-6">
+				<input type="text" ng-model="voluntario.ciudad" placeholder="Ciudad" class="form-control">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<textarea class="form-control" placeholder="Direccion de habitacion"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6"></div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="input-group">
+				  <span class="input-group-addon input-group-addon-default addon-left" id="basic-addon1">@</span>
+				  <input type="text" ng-model="voluntario.correo" class="form-control with-primary-addon" placeholder="Correo electronico">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<input type="text" ng-model="voluntario.telefono" class="form-control" placeholder="Telefono celular">
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-12">
+<div class="form-inline text-center">
+	
+      <label class="radio-inline custom-radio nowrap">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="estudiante" checked="true">
+        <span>ESTUDIANTE</span>
+      </label>
+   
+      <label class="radio-inline custom-radio nowrap">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="profesional">
+        <span>PROFESIONAL</span>
+      </label>
+   
+</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-4 text-center">
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.nombre" placeholder="Nombre de la institucion">
+		<br>
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.direccion" placeholder="Direccion de la institucion">
+		<br>
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.ciudad" placeholder="Ciudad">
+		<br>
+		<select class="form-control" ng-model="voluntario.gradoInstruccion">
+			<option value="0" selected="">Seleccione grado de instruccion</option>
+			<option value="no_estudios">Sin estudios</option>
+			<option value="primaria">Primaria</option>
+			<option value="bachiller">Bachiller</option>
+			<option value="universidad">Universidad</option>
+		</select>
+		<br>
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.telefono" placeholder="Numero de la institucion">
+		<br>
+	</div>
+
+	<div class="col-md-4 pull-right">
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.nombre" placeholder="Nombre de la Empresa">
+		<br>
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.direccion" placeholder="Direccion de la institucion">
+		<br>
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.ciudad" placeholder="Ciudad">
+		<br>
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.cargo" placeholder="Cargo">
+		<br>
+		<input type="text" name="" class="form-control" ng-model="voluntario.institucion.telefono" placeholder="Numero de la institucion">
+		<br>
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+	<div class="col-md-12 text-center">
+		<h4>Area de desempeño</h4>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-12 text-center">
+		<div class="form-inline">
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+			<label>Hospital coromoto</label>
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+			<label>Pastoral de salud</label>
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+		    <label>Actividades externas</label>
+		</div>
+		<br>
+		<div class="form-inline">
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+			<label>Hospital Esp. pediatricas</label>
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+			<label>Amigo incondicional</label>
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+		    <label>Eventos</label>
+		</div>
+		<br>
+		<div class="form-inline">
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+			<label>Hospital universitario</label>
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+			<label>Amigo mi refugio</label>
+			<ba-switcher switcher-style="primary" switcher-value="false"></ba-switcher>
+		    <label>Comunicaciones</label>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class="row">
+	<div class="col-md-12 text-center">
+		<button class="btn btn-lg btn-primary">INSCRIBIR</button>
+	</div>
+</div>

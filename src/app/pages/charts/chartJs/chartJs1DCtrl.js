@@ -12,8 +12,8 @@
   function chartJs1DCtrl($scope, baConfig) {
     var layoutColors = baConfig.colors;
 
-    $scope.labels =["Sleeping", "Designing", "Coding", "Cycling"];
-    $scope.data = [20, 40, 5, 35];
+    $scope.labels =["Sleeping", "Designing"];
+    $scope.data = [20,5];
     $scope.options = {
       elements: {
         arc: {

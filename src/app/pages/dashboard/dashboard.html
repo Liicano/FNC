@@ -1,63 +1,141 @@
-<dashboard-pie-chart></dashboard-pie-chart>
-
-<div class="row">
-  <div class="col-lg-6 col-md-12 col-sm-12"
-       ba-panel
-       ba-panel-title="Acquisition Channels"
-       ba-panel-class="medium-panel traffic-panel">
-    <traffic-chart></traffic-chart>
-  </div>
-  <div class="col-lg-6 col-md-12 col-sm-12"
-       ba-panel
-       ba-panel-title="Users by Country"
-       ba-panel-class="medium-panel">
-    <dashboard-map></dashboard-map>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-    <div class="row">
-      <div class="col-xlg-8 col-lg-12 col-md-12 col-sm-7 col-xs-12"
-           ba-panel
-           ba-panel-title="Revenue"
-           ba-panel-class="medium-panel">
-        <dashboard-line-chart></dashboard-line-chart>
+<div class="row" ng-controller="dashboardCtrl">
+  <div class="col-md-3">
+      <div ba-panel ba-panel-title="CANTIDAD DE VISITAS" ba-panel-class="xsmall-panel light-text bg-primary" ba-panel-style="'border-radius: 15px;'">
+      
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1><b>APLICACION WEB</b></h1>
+        </div>
       </div>
-      <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12"
-           ba-panel
-           ba-panel-class="popular-app medium-panel">
-        <popular-app></popular-app>
+      <div class="row">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="text-info">245.989</h1>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
-  <div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12"
-       ba-panel
-       ba-panel-title="Feed"
-       ba-panel-class="large-panel with-scroll feed-panel">
-    <blur-feed></blur-feed>
-  </div>
-</div>
+  <div class="col-md-3" style="border-radius: 15px;">
+      <div ba-panel ba-panel-title="PARTICIPACION GENERAL" ba-panel-class="xsmall-panel light-text" style="border-radius: 15px;">
+        
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="text-info">2.125</h3>
+          </div>
+        </div>
+        <div class="row">
+          
+          <div class="col-md-4">
+            <p><b>Donativos especiales</b></p><br>
+            <p class="text-info">638</p>
+          </div>
+          <div class="col-md-4">
+            <p><b>Total Encuestados</b></p><br>
+            <p class="text-info">1.229</p>
+          </div>
+          <div class="col-md-4">
+            <p><b>Total registrados</b></p><br>
+            <p class="text-info">258</p>
+          </div>
 
-<div class="row shift-up">
-  <div class="col-xlg-3 col-lg-6 col-md-6 col-xs-12"
-       ba-panel
-       ba-panel-title="To Do List"
-       ba-panel-class="xmedium-panel feed-comply-panel with-scroll todo-panel">
-    <dashboard-todo></dashboard-todo>
-  </div>
-  <div class="col-xlg-6 col-lg-6 col-md-6 col-xs-12"
-       ba-panel
-       ba-panel-title="Calendar"
-       ba-panel-class="xmedium-panel feed-comply-panel with-scroll calendar-panel">
-    <dashboard-calendar></dashboard-calendar>
-  </div>
-</div>
-
-<!--<div class="row">
-  <div class="col-lg-4 col-sm-6 col-xs-12">
-    <div ba-panel ba-panel-title="Weather" ba-panel-class="medium-panel with-scroll">
-      <blur-weather forecast="5"></blur-weather>
+        </div>
     </div>
   </div>
-</div>-->
+  <div class="col-md-3" style="border-radius: 15px;">
+      <div ba-panel ba-panel-title="TOTAL DE REGISTRADOS" ba-panel-class="xsmall-panel light-text" ba-panel-style="border-radius: 15px;">
+     
+      
+     <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="text-info">258</h3>
+          </div>
+        </div>
+        <div class="row">
+          
+          <div class="col-md-6 text-center">
+            <p><b>Voluntarios inscritos</b></p><br>
+            <p class="text-info">166</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <p><b>Angeles subscritos</b></p><br>
+            <p class="text-info">92</p>
+       
+
+        </div>
+    </div>
+    </div>
+    
+  </div>
+  <div class="col-md-3" style="border-radius: 15px;">
+      <div ba-panel ba-panel-title="DONATIVOS" ba-panel-class="xsmall-panel light-text" ba-panel-style="border-radius: 15px;">
+        
+
+
+       <div class="row">
+        <div class="col-md-12 text-center">
+          <h1><b>DONATIVOS TOTALES</b></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="text-info">1.377.000,00</h1>
+          </div>
+        </div>
+      </div>
+      
+
+        </div>
+    </div>
+  </div>
+
+<div class="row" ng-controller="dashboardCtrl">
+  <div class="col-md-3">
+      <div ba-panel ba-panel-title="INFORMACION DE INICIO" ba-panel-class="with-scroll ">
+            <p class="text-center">
+              <b><i>FNC, sistema de mineria de datos.</i></b>
+            </p>
+
+      <div class="kameleon-icon-tabs kameleon-icon with-round-bg danger"><img ng-src="assets/img/theme/icon/kameleon/Boss-3.svg"></div>
+      <p>
+        Se presenta informacion historica de el sistema, diversificada entre encuestas, donativos historicos y registros del voluntariado, informacion de interes para el administrador.   
+      </p>
+        </div>
+
+   </div>
+  <div class="col-md-3">
+      
+       <div ba-panel ba-panel-title="PARTICIPACION GENERAL" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+                <canvas id="doughnut" chart-options="optionsTGP" class="chart chart-doughnut"
+                        chart-data="dataTGP" chart-labels="labelsTGP" chart-click="changeData">
+                </canvas>
+            </div>
+        </div>
+
+  </div>
+  
+  <div class="col-md-3" >
+    
+      <div ba-panel ba-panel-title="TOTAL DE REGISTRADOS" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+                <canvas id="doughnut" chart-options="optionsTGP" class="chart chart-doughnut"
+                        chart-data="dataTR" chart-labels="labelsTR" chart-click="changeData">
+                </canvas>
+            </div>
+        </div>
+
+  </div>
+  <div class="col-md-3">
+       <div ba-panel ba-panel-title="TOTAL DE DONACIONES" ba-panel-class="with-scroll ">
+            <div class="chartjs-canvas-holder-first-row">
+                <canvas id="doughnut" chart-options="optionsTGP" class="chart chart-doughnut"
+                        chart-data="dataTD" chart-labels="labelsTD" chart-click="changeData">
+                </canvas>
+            </div>
+        </div>
+  </div>
+
+</div>

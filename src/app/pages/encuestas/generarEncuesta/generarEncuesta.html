@@ -1,0 +1,62 @@
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<h2 class="text-center" for="nombre_encuesta">Titulo de la encuesta</h2>
+		<input type="text" class="form-control" name="nombre_encuesta" placeholder="Nombre de la encuesta">
+	</div>
+	<div class="col-md-3"></div>
+
+</div>
+
+<hr class="divider">
+<div class="row">
+	<div class="col-md-12">
+		 <div class="alert bg-warning text-center">
+          <h3 class="">¡AGREGA TUS PREGUNTAS!</h3>
+        </div>
+	</div>
+</div>
+<hr class="divider">
+
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<h2 class="text-center" for="nombre_encuesta">Enunciado de la pregunta</h2>
+		<input type="text" class="form-control" ng-model="Pregunta_enunciado" name="nombre_pregunta" placeholder="Nombre de la Pregunta">
+	</div>
+	<div class="col-md-3"></div>
+</div>
+
+<hr class="divider">
+
+<div class="row">
+	<div class="col-md-12">
+		<h4 class="text-center">Vista previa de la pregunta:</h4><br>
+
+		 <div ba-panel ba-panel-title="VISTA PREVIA" ba-panel-class="xsmall-panel light-text bg-primary" ba-panel-style="'border-radius: 15px;'">
+      	
+		 	<center>
+		 		<h3 class="text-center" ng-model="Pregunta_enunciado">¿Has prestado tu ayuda a la fundacion de niños con cancer?</h3>
+		 	</center>
+		 	<br>
+
+		 	<center>
+		 		<ba-switcher switcher-style="success" switcher-value="false"></ba-switcher>
+		 	</center>
+
+
+      	
+    	</div>
+
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<button class="btn btn-lg btn-block btn-warning">Agregar pregunta</button>
+	</div>
+	<div class="col-md-6">
+		<button class="btn btn-lg btn-block btn-primary">Publicar Encuesta</button>
+	</div>
+</div>
