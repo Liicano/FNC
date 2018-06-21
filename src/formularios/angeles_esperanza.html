@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>FUNDACION || AMIGOS DEL NIÑO CON CANCER</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css_js_inicio/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css_js_inicio/bootstrap-toggle.css">
+<style type="text/css">
+  input[type=radio] {
+    width: 30px;
+    height: 30px;
+}
+
+input {
+  font-family: monospace;
+}
+label {
+  display: block;
+}
+div {
+  margin: 0 0 1rem 0;
+}
+
+.shell {
+  position: relative;
+  line-height: 1; }
+  .shell span {
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    color: #ccc;
+    pointer-events: none;
+    z-index: -1; }
+    .shell span i {
+      font-style: normal;
+      /* any of these 3 will work */
+      color: transparent;
+      opacity: 0;
+      visibility: hidden; }
+
+input.masked,
+.shell span {
+  font-size: 16px;
+  font-family: monospace;
+  padding-right: 10px;
+  background-color: transparent;
+  text-transform: uppercase; }
+
+</style>
+
+<body ng-app="angeles" ng-controller="angelesCtrl">
+
+<hr class="divider">
+ <div class="container">
+   <div class="row">
+   <div class="col-md-12">
+     <div class="alert alert-info text-primary text-center">
+       <h2>INSCRIPCION WEB - ANGELES DE ESPERANZA</h2>
+     </div>
+   </div>
+ </div>
+ </div>
+<hr class="divider">
+
+
+<div class="container">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-4 text-center">
+      <p><b>Quiero ayudar a los niños, niñas y adolescentes de la fundacion Amigos del niño con cancer Zulia a trave de  la colaboracion <span class="text-info">MENSUAL</span> de: </b></p>
+    </div>
+    <div class="col-md-4">
+      <select class="form-control" ng-model="monto">
+        <option value="500">Bsf   500</option>
+        <option value="1000">Bsf  1000</option>
+        <option value="2000">Bsf  2000</option>
+        <option value="5000">Bsf  5000</option>
+        <option value="10000">Bsf 10000</option>
+        <option value="20000">Bsf 20000</option>
+      </select>
+      <br>
+      <input type="text" name="otro_monto" class="form-control" placeholder="Otro monto Bsf">
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  </div>
+
+  <hr class="divider">
+  <div class="container">
+      <div class="row">
+      <div class="col-md-12">
+          <p class="text-center"><b>Por ello, con el siguiente documento yo declaro mi autorizacion para el debito bancario en la opcion de:</b></p>
+      </div>
+    </div>
+    </div>
+    <hr class="divider">
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+         <input type="radio" name="tipo_pago_cuenta" id="tipo_pago_cuenta" value="cuenta_bancaria">CUENTA  DE BANCO PERSONAL
+         <hr class="divider">
+
+         <div class="container border border-dark" style="border-radius: 15px;">
+          <br>
+           <div class="form-group row">
+              <label for="numero_cuenta" class="col-sm-2 col-form-label"><b>Cuenta</b></label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="numero_cuenta" placeholder="0000-0000-00-0000000000">
+              </div>
+            </div>
+
+            <br>
+           <div class="form-group row">
+              <label for="banco" class="col-sm-2 col-form-label"><b>Banco</b></label>
+              <div class="col-sm-10">
+                <select class="form-control">
+                  <option value="bod">Banco occidental de descuento</option>
+                  <option value="banesco">Banesco</option>
+                </select>
+              </div>
+            </div>
+
+               <div class="row">
+           <div class="col-md-6 text-center">
+             <input type="radio" name="tipo_pago_cuenta" id="tipo_pago_cuenta" value="cuenta_bancaria">CUENTA DE AHORROS
+           </div>
+           <div class="col-md-6 text-center">
+             <input type="radio" name="tipo_pago_cuenta" id="tipo_pago_cuenta" value="cuenta_bancaria">CUENTA CORRIENTE
+           </div>
+         </div>
+         <br>
+         </div>
+
+      
+      </div>
+      <div class="col-md-6">
+        <input type="radio" name="tipo_pago_cuenta" id="tipo_pago_cuenta" value="tarjeta_credito">TARJETA DE CREDITO
+        <hr class="divider">
+         <div class="container border border-dark" style="border-radius: 15px;">
+          <br>
+           <div class="form-group row">
+              <label for="numero_cuenta" class="col-sm-2 col-form-label"><b>Cuenta</b></label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="numero_cuenta" placeholder="0000-0000-0000-0000">
+              </div>
+            </div>
+
+            <br>
+           <div class="form-group row">
+              <label for="banco" class="col-sm-2 col-form-label"><b>Banco</b></label>
+              <div class="col-sm-10">
+                <select class="form-control">
+                  <option value="bod">Banco occidental de descuento</option>
+                  <option value="banesco">Banesco</option>
+                </select>
+              </div>
+            </div>
+
+               <div class="row">
+           <div class="col-md-4 text-center">
+             <input type="radio" name="tipo_pago_cuenta" id="tipo_pago_cuenta" value="cuenta_bancaria">VISA
+           </div>
+           <div class="col-md-4 text-center">
+             <input type="radio" name="tipo_pago_cuenta" id="tipo_pago_cuenta" value="cuenta_bancaria">MASTERCARD
+           </div>
+
+            <div class="col-md-4 text-center">
+               <input id="cc" type="text" placeholder="MM/YY" class="masked form-control" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)" data-valid-example="05/18"/>
+           </div>
+
+         </div>
+         <br>
+         </div>
+            
+
+
+        
+      </div>
+    </div>
+</div>
+
+
+<div class="container text-center" style="width: 60%;">
+  <h4 class="text-center">
+    Datos personales
+  </h4>
+  <hr class="divider">
+  <div class="row">
+    <div class="col-md-6">
+      <input type="text"  class="form-control" name="nombre" placeholder="Nombre">
+    </div>
+    <div class="col-md-6">
+      <input type="text"  class="form-control" name="apellido" placeholder="Apellido">
+      
+    </div>
+   
+  </div>
+   <div class="row">
+      <div class="col-md-4">
+        <input type="text" class="form-control" name="cedula" placeholder="Cedula de identidad">
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" name="correo" placeholder="Correo">
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" name="telefono" placeholder="Telefon celular">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="ciudad" placeholder="Ciudad">
+      </div>
+      <div class="col-md-6">
+        <textarea class="form-control" rows="5" placeholder="Direccion"></textarea>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+    <button class="btn btn-lg btn-success btn-block">Enviar formulario</button>
+  </div>
+  <div class="col-md-6">
+    <a class="btn btn-lg btn-danger btn-block" href="../inicio.html">Salir</a>
+    
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+</body>
+<script type="text/javascript"src="../css_js_inicio/bootstrap.min.js"></script>
+<script type="text/javascript"src="../css_js_inicio/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"src="../css_js_inicio/bootstrap-toggle.js"></script>
+<script type="text/javascript"src="../css_js_inicio/angular.js"></script>
+<script src="../css_js_inicio/mascaras_inputs.js" data-autoinit="true"></script>
+<script type="text/javascript"src="../formularios/controladores/angelesCtrl.
+js"></script>
+
+
+
+</html>
